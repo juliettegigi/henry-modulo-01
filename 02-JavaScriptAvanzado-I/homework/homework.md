@@ -26,7 +26,7 @@ var c = function (a, b, c) {
 c(8, 9, 10);
 console.log(b);
 console.log(x);
-```
+```imprime : 10/8/8/9/10/1
 
 ```javascript
 console.log(bar);
@@ -37,7 +37,8 @@ function foo() {
 }
 var bar = 1;
 baz = 2;
-```
+
+```DA ERROR PORQU BAZ NO ESTÁ DEFINIDA, ENTONCES NO LA SUBE , SOLO SUBE LAS VAR 
 
 ```javascript
 var instructor = 'Tony';
@@ -45,7 +46,7 @@ if (true) {
    var instructor = 'Franco';
 }
 console.log(instructor);
-```
+``` IMPRIME FRANCO
 
 ```javascript
 var instructor = 'Tony';
@@ -57,7 +58,7 @@ console.log(instructor);
    }
 })();
 console.log(instructor);
-```
+```TONY,  FRANCO, TONY
 
 ```javascript
 var instructor = 'Tony';
@@ -65,11 +66,11 @@ let pm = 'Franco';
 if (true) {
    var instructor = 'The Flash';
    let pm = 'Reverse Flash';
-   console.log(instructor);
-   console.log(pm);
+   console.log(instructor); // the flash
+   console.log(pm);  //reverse flash
 }
-console.log(instructor);
-console.log(pm);
+console.log(instructor); //the flash
+console.log(pm); // franco
 ```
 
 ### Coerción de Datos
@@ -77,21 +78,21 @@ console.log(pm);
 ¿Cuál crees que será el resultado de la ejecución de estas operaciones?:
 
 ```javascript
-6 / "3"
-"2" * "3"
-4 + 5 + "px"
-"$" + 4 + 5
-"4" - 2
-"4px" - 2
-7 / 0
-{}[0]
-parseInt("09")
-5 && 2
-2 && 5
-5 || 0
-0 || 5
-[3]+[3]-[10]
-3>2>1
+6 / "3"  //2
+"2" * "3"  // 6
+4 + 5 + "px"  // 9px
+"$" + 4 + 5  //$45
+"4" - 2   // 2
+"4px" - 2  //NaN
+7 / 0 //infinity
+{}[0] //undefined
+parseInt("09") //9
+5 && 2  // 2
+2 && 5  // 5 (2 es true ==> tengo q ver si lo es 5 ==> retorno ese valor)
+5 || 0  //5  (5 es true ==> ya está, retorna ese valor)
+0 || 5  //5  (0 es false ==> tengo q ver el siguiente valor ==> 5 es true==>lo retorna)
+[3]+[3]-[10] //
+3>2>1 //
 [] == ![]
 ```
 
@@ -103,8 +104,8 @@ parseInt("09")
 
 ```javascript
 function test() {
-   console.log(a);
-   console.log(foo());
+    console.log(a); //undefined
+    console.log(foo());//2
 
    var a = 1;
    function foo() {
@@ -128,7 +129,7 @@ function getFood(food) {
    return snack;
 }
 
-getFood(false);
+getFood(false);  //undefined
 ```
 
 ### This
@@ -147,11 +148,11 @@ var obj = {
    },
 };
 
-console.log(obj.prop.getFullname());
+console.log(obj.prop.getFullname());//aurelio
 
 var test = obj.prop.getFullname;
 
-console.log(test());
+console.log(test()); /////////// undefined
 ```
 
 ### Event loop
@@ -170,5 +171,5 @@ function printing() {
    console.log(4);
 }
 
-printing();
+printing(); //1,4,3,2
 ```

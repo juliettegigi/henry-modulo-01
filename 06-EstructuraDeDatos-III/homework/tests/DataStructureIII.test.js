@@ -8,7 +8,7 @@ const {
 describe('binarySearchTree', function() {
   var tree,
       testArr,
-      valuesToInsert = [15, 25, 5, 17, 21, 28, 0, 14, 50, 1, 45, 13, 12, 11, 30, 35, 33, 31, 34];
+      valuesToInsert = [15, 25, 5, 17, 21, 28, 0, 14, 50, 1, 45, 13, 12, 11, 30, 35, 33, 31, 34]; // AGREGUÉ 20 EN [0]
 
   beforeEach(function() {
     tree = new BinarySearchTree(20);

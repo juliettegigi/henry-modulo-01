@@ -1,5 +1,6 @@
 # Manejo de Errores en JavaScript
 
+TypeError
 Escribir programas que anden bien cuando todo funciona como esperabamos es un buen comienzo. Pero esto no sucede todo el tiempo, siempre vamos a encontrar situaciones que estaban más allá de lo que podiamos esperar que suceda (usuarios). Y acá es donde se pone un poco más díficil. Veamos como podemos manejar situaciones inesperadas dentro de nuestro código, para eso vamos a aprender sobre __errores__ en JavaScript.
 
 ## Tipos de Errores

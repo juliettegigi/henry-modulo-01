@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest --collectCoverage=false CS.test.js",
     "grade": "jest --useStderr --json --outputFile=./tests/result.json"
+    
   },
   "devDependencies": {
     "jest": "^27.5.1"
